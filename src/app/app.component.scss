@@ -1,0 +1,30 @@
+.sidebar-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  background: #09e6d3;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  background: #211f20;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.sidebar-content {
+  background: #fff;
+}

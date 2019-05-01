@@ -1,0 +1,17 @@
+.cyco-menu {
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-end;
+    mat-icon {
+        width: calc(30vw - 25vw);
+        height: calc(30vw - 25vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

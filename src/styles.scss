@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.full-width {
+    width: 100vw;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@mixin flex-jc-ac() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-jb-ac() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-ja-ac() {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.d-fc-jc-ac {
+  @include flex-jc-ac();
+  flex-direction: column;
+}
+
+.d-fc-jb-ac {
+  @include flex-jb-ac();
+  flex-direction: column;
+}
+
+.d-fc-ja-ac {
+  @include flex-ja-ac();
+  flex-direction: column;
+}
+
+.d-fr-jc-ac {
+  @include flex-jc-ac();
+  flex-direction: row;
+}
+
+.d-fr-jb-ac {
+  @include flex-jb-ac();
+  flex-direction: row;
+}
+
+.d-fr-ja-ac {
+  @include flex-ja-ac();
+  flex-direction: column;
+}
