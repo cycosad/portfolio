@@ -1,0 +1,31 @@
+// @import '~@angular/material/theming';
+// @include mat-core();
+
+// $primary: (50: #09e6d3,
+//   700: #09e6d3,
+// );
+
+// $brand-indigo: (50: #e0ebf3,
+//   100: #b3cee1,
+//   200: #80adce,
+//   300: #4d8cba,
+//   400: #2673ab,
+//   500: #3DBAFC,
+//   600: #005294,
+//   700: #00488a,
+//   800: #3DBAFC,
+//   A200: #6a9bff,
+//   A400: #3778ff,
+//   A700: #1e67ff,
+//   contrast: (500: white,
+//     600: white,
+//     700: white,
+//     800: white,
+//     900: white,
+//     A700: white,
+//   ));
+
+// $my-app-primary: mat-palette($brand-indigo);
+
+// $my-app-theme: mat-light-theme($my-app-primary);
+// @include angular-material-theme($my-app-primary);

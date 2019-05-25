@@ -1,23 +1,83 @@
+$color-primary: #09e6d3 !important;
+$color-primary-lighten: rgba(9, 230, 211, 0.1);
+$color-secondary: #211f20 !important;
+$color-white: #fff;
+$color-text: #757575 !important;
+
 html,
 body {
   height: 100%;
+  font-size: 1.125rem;
+  font-family: 'Abel', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #09e6d3;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+h1 {
+  color: $color-secondary;
+  font-size: 3rem !important;
+}
+
+p {
+  color: $color-text;
+}
+
+.pr-2 {
+  padding-right: 0.75rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .full-width {
-    width: 100vw;
+  width: 100vw;
 }
 
 .full-height {
-    height: 100vh;
+  height: 100vh;
+}
+
+.w-100p {
+  width: 100%;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 @mixin flex-jc-ac() {
@@ -66,4 +126,277 @@ body {
 .d-fr-ja-ac {
   @include flex-ja-ac();
   flex-direction: column;
+}
+
+
+/*
+ * Sidebar
+ */
+
+.cyco-sidebar-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: $color-white;
+}
+
+mat-sidenav {
+
+  width: 30vw;
+  background: $color-primary;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  .cyco-sidebar-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    background: $color-secondary;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+}
+
+.cyco-sidebar-content {
+  color: $color-text;
+}
+
+.social-links {
+  a {
+    padding: 1rem;
+    color: $color-white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+/*
+ * Menu
+ */
+
+.cyco-menu {
+  display: flex;
+  height: 100vh;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-end;
+
+  mat-icon {
+    width: calc(30vw - 25vw);
+    height: calc(30vw - 25vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+  }
+}
+
+
+/*
+ * about
+ */
+
+.cyco-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 5rem;
+}
+
+.cyco-about-quote {
+  margin: 2rem 0;
+  color: $color-white;
+  background: $color-secondary;
+  text-align: center;
+  padding: 5rem;
+  font-family: 'Bad Script', cursive;
+
+  div {
+    position: relative;
+
+    .top-quote {
+      position: absolute;
+      width: 40px;
+      left: -50px;
+      top: -15px;
+    }
+  }
+}
+
+.cyco-skills {
+  padding: 3rem 5rem;
+  text-align: center;
+
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .skill {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        @extend .d-fr-ja-ac;
+
+        img {
+          z-index: 2;
+          width: 100px;
+        }
+
+        .circle-overlay {
+          z-index: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: $color-primary-lighten;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+
+        .exp {
+          z-index: 3;
+          position: absolute;
+          bottom: 0%;
+          right: 0;
+          width: 50px;
+          height: 50px;
+          background: $color-primary;
+          color: $color-white;
+          border-radius: 50%;
+          @extend .d-fr-jc-ac;
+        }
+      }
+
+      h3 {
+        margin-bottom: 0;
+        color: $color-primary;
+      }
+
+      h5 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+/*
+ * work
+ */
+
+.cyco-work-content {
+  margin-top: 2rem;
+  padding: 3rem 5rem;
+  background: $color-secondary;
+
+  .mat-tab-labels {
+    flex-direction: row-reverse;
+  }
+
+  .websites {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+
+    .website {
+      width: 380px;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      @extend .d-fr-jc-ac;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+
+      &:hover {
+        cursor: pointer;
+
+        .overlay {
+          background: rgba(9, 230, 211, 0.5);
+        }
+      }
+
+      .website-content {
+        z-index: 1;
+        color: #fff;
+
+        h4 {
+          margin: 0;
+          font-family: 'Abel', sans-serif;
+        }
+
+        h6 {
+          margin: 0;
+          font-family: 'Abel', sans-serif;
+        }
+      }
+    }
+  }
+
+  .designs {
+    display: flex;
+    padding: 3rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .design {
+      align-self: center;
+      width: 380px;
+      min-height: 200px;
+      margin-bottom: 3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+
+}
+
+.mat-ink-bar {
+  background-color: $color-primary;
+}
+
+
+.under-construction {
+  text-align: center;
+  i {
+    color: $color-primary;
+  }
 }

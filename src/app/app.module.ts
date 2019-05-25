@@ -11,13 +11,21 @@ import {MatIconModule} from '@angular/material/icon';
 import {ProfileComponent} from './profile/profile.component';
 import {MatRippleModule} from '@angular/material/core';
 import {MenuComponent} from './menu/menu.component';
+import {AboutComponent} from './about/about.component';
+import {WorkComponent} from './work/work.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDialogModule, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ImageViewComponent} from './image-view/image-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    MenuComponent
+    MenuComponent,
+    AboutComponent,
+    WorkComponent,
+    ImageViewComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,12 @@ import {MenuComponent} from './menu/menu.component';
     MatToolbarModule,
     MatIconModule,
     MatRippleModule,
+    MatTabsModule,
+    MatDialogModule,
     BrowserAnimationsModule
+  ],
+  entryComponents: [
+    ImageViewComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

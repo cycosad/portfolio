@@ -1,0 +1,33 @@
+<div class="cyco-content">
+  <h1>About</h1>
+  <p>I never thought of myself to become an Full Stack developer. At the initial stage of learning different kinds of
+    programming I felt this web programming very interesting and entered into the world of web and this interest turned
+    into passion and from then I started creating websites and now I specialize in creating beautiful, usable ,
+    professional websites using best practice tools available.
+    My weapons to create good websites are HTML , CSS, JavaScript, PHP, Bootstrap, Angular, Photoshop and WordPress.
+    <br><br><br>
+    This fortunate turn of events has lead me to become web master of GRIET. My role was to design/develop websites for
+    the
+    college and to the various departments in it and many other organizations and maintaining them.</p>
+</div>
+<div class="cyco-about-quote">
+  <div>
+    <img src="assets/images/quote.svg" class="top-quote">
+    I love what I do and I do what the clients love & want to work with great clients all over the world to create
+    thoughtful and purposeful websites.
+  </div>
+</div>
+<div class="cyco-skills">
+  <h1 class="mt-0">Skills</h1>
+  <div class="skills">
+    <div class="skill" *ngFor="let skill of skills">
+      <div class="icon">
+        <img src="assets/images/logos/{{skill.img}}.png" [alt]="skill.title">
+        <div class="circle-overlay"></div>
+        <div class="exp">{{skill.exp}}+</div>
+      </div>
+      <h3>{{skill.title}}</h3>
+      <h5>{{skill.scale}}</h5>
+    </div>
+  </div>
+</div>

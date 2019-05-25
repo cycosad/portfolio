@@ -1,11 +1,11 @@
-<mat-sidenav-container class="=sidebar-container">
-  <mat-sidenav mode="side" opened class="sidebar-menu" position="start" [fixedInViewport]="true">
-    <app-menu></app-menu>
+<mat-sidenav-container class="cyco-sidebar-container">
+  <mat-sidenav mode="side" opened position="start" [fixedInViewport]="true">
+    <div class="d-fr-jc-ac">
+      <app-profile class="cyco-sidebar-profile"></app-profile>
+      <app-menu></app-menu>
+    </div>
   </mat-sidenav>
-  <mat-sidenav mode="side" opened class="sidebar-profile" position="start" [fixedInViewport]="true">
-    <app-profile></app-profile>
-  </mat-sidenav>
-  <mat-sidenav-content class="sidebar-content">
-    Hello world
+  <mat-sidenav-content class="cyco-sidebar-content">
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

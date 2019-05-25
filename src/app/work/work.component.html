@@ -1,0 +1,28 @@
+<div class="cyco-content">
+  <h1>Portfolio</h1>
+  <p>Design is a way of life, a point of view. It involves the whole complex of visual communications: talent, creative
+    ability, manual skill, and technical knowledge. Aesthetics and economics, technology and psychology are
+    intrinsically related to the process.</p>
+</div>
+<div class="cyco-work-content">
+  <mat-tab-group>
+    <mat-tab label="Websites">
+      <div class="websites">
+        <a *ngFor="let site of websites" class="website" href="{{site.src}}" target="_blank" [ngStyle]="{'background-image': 'url(assets/images/websites/' + site.img + ')'}">
+          <div class="overlay"></div>
+          <div class="website-content">
+            <h4>{{site.title}}</h4>
+            <h6>{{site.subTitle}}</h6>
+          </div>
+        </a>
+      </div>
+    </mat-tab>
+    <mat-tab label="Designs">
+      <div class="designs">
+        <div class="design" *ngFor="let design of designs">
+          <img [src]="'assets/images/designs/' + design.src" (click)="openDialog(design.src)" alt="Design">
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
